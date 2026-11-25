@@ -1,10 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Quiet Nest Guest House | Rest. Relax. Return.</title>
-<meta name="description" content="A peaceful guest house with comfortable rooms, self-catering kitchenettes and a pool. Book your stay on WhatsApp.">
+<meta name="description" content="A peaceful guest house with comfortable rooms, self-catering kitchenettes and a pool.">
+
 <style>
 :root{--cream:#f7f2ea;--sand:#eadfcd;--ink:#2a2622;--muted:#6f675d;--gold:#b08d57;--dark:#1d1a17}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -13,17 +15,22 @@ body{background:var(--cream);color:var(--ink);font-family:'Helvetica Neue',Arial
 h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font-family:inherit}
+
 .demo{background:var(--gold);color:#fff;text-align:center;font-size:11px;letter-spacing:2px;padding:5px}
+
 nav{position:fixed;top:24px;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;transition:.3s;color:#fff}
 nav.solid{top:0;background:rgba(29,26,23,.95);padding:12px 20px}
 .logo{font-family:Georgia,serif;font-size:19px;letter-spacing:1px}
 .logo span{color:var(--gold)}
 .links{display:flex;gap:18px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;align-items:center}
 .links .hide{display:none}
+
 @media(min-width:760px){.links .hide{display:inline}}
+
 .btn{display:inline-block;padding:14px 30px;border:1px solid var(--gold);background:var(--gold);color:#fff;letter-spacing:1.5px;font-size:13px;text-transform:uppercase;cursor:pointer}
 .btn.ghost{background:transparent;color:#fff;border-color:#fff}
 .btn.sm{padding:9px 18px;font-size:12px}
+
 .hero{height:100vh;height:100svh;min-height:520px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:#222 url('hero.jpg') center/cover no-repeat}
 .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.55),rgba(20,16,12,.45) 50%,rgba(20,16,12,.7))}
 .hero .in{position:relative;padding:0 22px;max-width:720px}
@@ -33,16 +40,19 @@ nav.solid{top:0;background:rgba(29,26,23,.95);padding:12px 20px}
 .hero .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .scroll{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:12px;letter-spacing:3px;color:#fff;opacity:.8;animation:bob 1.8s infinite}
 @keyframes bob{50%{transform:translateY(6px)}}
+
 section{padding:68px 20px}
 .wrap{max-width:1000px;margin:auto}
 .eyebrow{text-align:center;color:var(--gold);letter-spacing:4px;font-size:12px;text-transform:uppercase}
 h2{text-align:center;font-size:32px;margin:6px 0 14px}
 .lead{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 34px}
+
 .about{background:#fff}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:10px}
 .fact{text-align:center;padding:18px 10px;background:var(--cream);border-radius:4px}
 .fact b{display:block;font-family:Georgia,serif;font-size:26px;color:var(--gold)}
 .fact span{font-size:13px;color:var(--muted)}
+
 .rooms{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
 .room{background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.06)}
 .room img{width:100%;height:240px;object-fit:cover;display:block;cursor:pointer}
@@ -54,37 +64,55 @@ h2{text-align:center;font-size:32px;margin:6px 0 14px}
 .room li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
 .price{font-family:Georgia,serif;font-size:20px;margin-bottom:12px}
 .price small{font-size:12px;color:var(--muted);font-family:Arial}
+
 .amen{background:var(--dark);color:#fff}
-.amen h2{color:#fff}.amen .lead{color:#c9c0b3}
+.amen h2{color:#fff}
+.amen .lead{color:#c9c0b3}
 .agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
 .a{border:1px solid #3a342d;padding:20px 12px;text-align:center;font-size:14px}
 .a i{display:block;font-style:normal;font-size:28px;margin-bottom:6px}
+
 .gal{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
 .gal img{width:100%;height:190px;object-fit:cover;display:block;cursor:pointer}
 .gal img.tall{grid-row:span 2;height:390px}
+
 .book{background:var(--sand)}
 .bwrap{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));max-width:900px;margin:auto}
+
 form{background:#fff;padding:22px}
 form label{display:block;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 form input,form select,form textarea{width:100%;padding:12px;border:1px solid #d8cdb9;background:#fffdf9;font-size:15px;margin-bottom:12px}
 form .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 form .btn{width:100%;text-align:center}
-.cinfo a.row{display:flex;gap:14px;align-items:center;background:#fff;padding:16px;margin-bottom:12px}
-.cinfo .ic{font-size:22px}.cinfo b{display:block}.cinfo span{font-size:13px;color:var(--muted)}
+
+.cinfo .contact-card{display:flex;gap:14px;align-items:center;background:#fff;padding:22px 16px;margin-bottom:12px}
+.cinfo .ic{font-size:22px}
+.cinfo b{display:block}
+.cinfo span{font-size:14px;color:var(--muted)}
+.demo-note{font-size:11px!important;color:#a08b6e!important;letter-spacing:1px}
+
 footer{background:var(--dark);color:#bdb3a5;text-align:center;padding:34px 20px 90px;font-size:13px}
 footer b{color:#fff;font-family:Georgia,serif;font-size:18px;font-weight:400}
+
 #fab{position:fixed;right:14px;bottom:16px;z-index:40;background:#1faa59;color:#fff;font-weight:700;padding:13px 18px;border-radius:30px;font-size:14px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+
 #lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:60;align-items:center;justify-content:center;padding:10px}
 #lb img{max-width:100%;max-height:100%}
+
+#demoMessage{display:none;background:#f7f2ea;color:#6f675d;padding:14px;margin-top:12px;text-align:center;font-size:13px;border-left:3px solid var(--gold)}
 </style>
 </head>
+
 <body>
+
 <div class="demo">DEMO WEBSITE</div>
 
 <nav id="nav">
   <a class="logo" href="#top">The Quiet <span>Nest</span></a>
   <div class="links">
-    <a class="hide" href="#rooms">Rooms</a><a class="hide" href="#gallery">Gallery</a><a class="hide" href="#facilities">Facilities</a>
+    <a class="hide" href="#rooms">Rooms</a>
+    <a class="hide" href="#gallery">Gallery</a>
+    <a class="hide" href="#facilities">Facilities</a>
     <a class="btn sm" href="#book">Book</a>
   </div>
 </nav>
@@ -121,23 +149,33 @@ footer b{color:#fff;font-family:Georgia,serif;font-size:18px;font-weight:400}
     <div class="eyebrow">Accommodation</div>
     <h2>Our rooms</h2>
     <p class="lead">Simple, clean and comfortable. Choose the room that suits your stay.</p>
+
     <div class="rooms">
       <div class="room">
         <img src="bedroom.jpg" alt="Comfort room with a large bed and bedside lamps" onclick="openLb(this)">
         <div class="b">
           <h3>Comfort Room</h3>
           <p>A restful room with a large bed, bedside tables, wardrobe space and a seating corner.</p>
-          <ul><li>Comfortable double bed</li><li>Private bathroom with shower</li><li>Wardrobe and TV</li></ul>
+          <ul>
+            <li>Comfortable double bed</li>
+            <li>Private bathroom with shower</li>
+            <li>Wardrobe and TV</li>
+          </ul>
           <div class="price">From R650 <small>per night (demo rate)</small></div>
           <a class="btn sm" style="background:var(--ink);border-color:var(--ink)" href="#book" onclick="setRoom('Comfort Room')">Book this room</a>
         </div>
       </div>
+
       <div class="room">
         <img src="kitchenette.jpg" alt="Self-catering room with kitchenette and dining set" onclick="openLb(this)">
         <div class="b">
           <h3>Self-Catering Suite</h3>
           <p>Cook your own meals in your private kitchenette with a fridge, microwave, kettle and dining set.</p>
-          <ul><li>Fully equipped kitchenette</li><li>Dining table and chairs</li><li>Great for longer stays</li></ul>
+          <ul>
+            <li>Fully equipped kitchenette</li>
+            <li>Dining table and chairs</li>
+            <li>Great for longer stays</li>
+          </ul>
           <div class="price">From R850 <small>per night (demo rate)</small></div>
           <a class="btn sm" style="background:var(--ink);border-color:var(--ink)" href="#book" onclick="setRoom('Self-Catering Suite')">Book this room</a>
         </div>
@@ -184,52 +222,118 @@ footer b{color:#fff;font-family:Georgia,serif;font-size:18px;font-weight:400}
   <div class="wrap">
     <div class="eyebrow">Reservations</div>
     <h2>Book your stay</h2>
-    <p class="lead">Send us your dates and we will confirm availability on WhatsApp.</p>
+    <p class="lead">Explore our sample booking form. This demonstration does not submit real reservations.</p>
+
     <div class="bwrap">
+
       <form onsubmit="sendBooking();return false">
-        <label>Your name</label><input id="bn" required>
+        <label>Your name</label>
+        <input id="bn" placeholder="Enter your name" required>
+
         <label>Room</label>
-        <select id="br"><option>Comfort Room</option><option>Self-Catering Suite</option><option>Not sure yet</option></select>
+        <select id="br">
+          <option>Comfort Room</option>
+          <option>Self-Catering Suite</option>
+          <option>Not sure yet</option>
+        </select>
+
         <div class="two">
-          <div><label>Check-in</label><input id="bi" type="date"></div>
-          <div><label>Check-out</label><input id="bo" type="date"></div>
+          <div>
+            <label>Check-in</label>
+            <input id="bi" type="date">
+          </div>
+          <div>
+            <label>Check-out</label>
+            <input id="bo" type="date">
+          </div>
         </div>
-        <label>Guests</label><input id="bg" type="number" min="1" value="2">
-        <label>Message (optional)</label><textarea id="bm" rows="2"></textarea>
-        <button class="btn" type="submit">Send on WhatsApp</button>
+
+        <label>Guests</label>
+        <input id="bg" type="number" min="1" value="2">
+
+        <label>Message (optional)</label>
+        <textarea id="bm" rows="2"></textarea>
+
+        <button class="btn" type="submit">Send demo booking</button>
+
+        <div id="demoMessage">
+          This is a demonstration website. Your booking has not been sent and no real reservation has been made.
+        </div>
       </form>
+
       <div class="cinfo">
-        <a class="row" href="https://wa.me/27834597295?text=Hi%2C%20I%20would%20like%20to%20book%20a%20room%20at%20The%20Quiet%20Nest." target="_blank" rel="noopener"><div class="ic">&#128172;</div><div><b>WhatsApp</b><span>083 459 7295</span></div></a>
-        <a class="row" href="tel:+27834597295"><div class="ic">&#128222;</div><div><b>Call</b><span>083 459 7295</span></div></a>
-        <a class="row" href="mailto:novaweb.atelier26@gmail.com?subject=Booking%20enquiry"><div class="ic">&#9993;&#65039;</div><div><b>Email</b><span>novaweb.atelier26@gmail.com</span></div></a>
+
+        <div class="contact-card">
+          <div class="ic">&#128172;</div>
+          <div>
+            <b>WhatsApp</b>
+            <span>Demo contact — not connected</span>
+            <span class="demo-note">SAMPLE CONTACT</span>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="ic">&#128222;</div>
+          <div>
+            <b>Call</b>
+            <span>Demo line — not connected</span>
+            <span class="demo-note">SAMPLE CONTACT</span>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="ic">&#9993;&#65039;</div>
+          <div>
+            <b>Email</b>
+            <span>demo@example.com</span>
+            <span class="demo-note">SAMPLE EMAIL</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <b>The Quiet Nest Guest House</b><br>Rest. Relax. Return.<br><br>
+  <b>The Quiet Nest Guest House</b><br>
+  Rest. Relax. Return.<br><br>
   Demo website designed by NovaWeb Atelier26
 </footer>
 
-<a id="fab" href="https://wa.me/27834597295?text=Hi%2C%20I%20would%20like%20to%20book%20a%20room%20at%20The%20Quiet%20Nest." target="_blank" rel="noopener">&#128172; Book on WhatsApp</a>
-<div id="lb" onclick="this.style.display='none'"><img id="lbimg" alt=""></div>
+<a id="fab" href="#book">&#128172; Demo Booking</a>
+
+<div id="lb" onclick="this.style.display='none'">
+  <img id="lbimg" alt="">
+</div>
 
 <script>
 var nav=document.getElementById('nav');
-function onS(){nav.classList.toggle('solid',window.scrollY>60)}
-window.addEventListener('scroll',onS);onS();
-function openLb(el){document.getElementById('lbimg').src=el.src;document.getElementById('lb').style.display='flex'}
-function setRoom(n){document.getElementById('br').value=n}
+
+function onS(){
+  nav.classList.toggle('solid',window.scrollY>60);
+}
+
+window.addEventListener('scroll',onS);
+onS();
+
+function openLb(el){
+  document.getElementById('lbimg').src=el.src;
+  document.getElementById('lb').style.display='flex';
+}
+
+function setRoom(n){
+  document.getElementById('br').value=n;
+}
+
 function sendBooking(){
-  var m='Hi The Quiet Nest, I would like to book.\nName: '+document.getElementById('bn').value
-   +'\nRoom: '+document.getElementById('br').value
-   +'\nCheck-in: '+(document.getElementById('bi').value||'not sure')
-   +'\nCheck-out: '+(document.getElementById('bo').value||'not sure')
-   +'\nGuests: '+document.getElementById('bg').value
-   +(document.getElementById('bm').value?'\nMessage: '+document.getElementById('bm').value:'');
-  window.open('https://wa.me/27834597295?text='+encodeURIComponent(m),'_blank');
+  document.getElementById('demoMessage').style.display='block';
+  document.getElementById('demoMessage').scrollIntoView({
+    behavior:'smooth',
+    block:'nearest'
+  });
 }
 </script>
+
 </body>
 </html>
